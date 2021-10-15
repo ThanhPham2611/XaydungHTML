@@ -7,5 +7,16 @@ h2 {
 }
 
 label {
-    color: blue;
+    color: #2250f9;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #2250f9;
+    background-color: #d4fdd6;
+}
+
+#regisn {
+    background-color: #fffda9;
 }

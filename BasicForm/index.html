@@ -9,7 +9,7 @@
 </head>
 <body>
     <table >
-        <div class="wrapper">
+        <form>
             <tr>
                 <td colspan="2">
                     <h2>Sở thích của bạn</h2>
@@ -41,7 +41,7 @@
                 </td>
     
                 <td>
-                    <input type="checkbox" name="favourite" id="favourite">Thể thao
+                    <input type="checkbox" name="favourite" id="favourite" checked>Thể thao
                     <input type="checkbox" name="favourite" id="favourite">Âm nhạc
                     <input type="checkbox" name="favourite" id="favourite">Đọc sách
                 </td>
@@ -63,7 +63,96 @@
                     <button type="reset">Nhập lại</button>
                 </td>
             </tr>
-        </div>
+        </form>
+    </table>
+
+    <br><br>
+
+    <table id=regisn>
+        <form action="">
+            <tr>
+                <td colspan="2">
+                    <h3>Đăng ký học viên</h3>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="users">Họ và tên</label>
+                </td>
+                <td>
+                    <input type="text" id="users" name="users">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="birthday">Ngày sinh</label>
+                </td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="">Giới tính</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="1">Nam
+                    <input type="radio" name="gender" value="0">Nữ
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="adress">Địa chỉ</label>
+                </td>
+                <td>
+                    <textarea name="adress" id="adress" cols="20" rows="5"></textarea>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="class">Lớp</label>
+                </td>
+                <td>
+                    <select name="class" id="class">
+                        <option value="">Chọn lớp</option>
+                        <option value="">12A1</option>
+                        <option value="">12A2</option>
+                        <option value="">12A3</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="email1">Email</label>
+                </td>
+                <td>
+                    <input type="email" id="email1" name="email1">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="phone">Điện thoại</label>
+                </td>
+                <td>
+                    <input type="tel" name="phone" id="phone">
+                </td>
+            </tr>
+    
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Đăng ký</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </form>
     </table>
 </body>
 </html>
