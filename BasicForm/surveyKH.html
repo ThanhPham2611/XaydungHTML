@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="survey.css">
+    <title>Khảo sát khách hàng</title>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <header class="info" id="header">
+                <h2 class>Market Research Survey</h2>
+                <div class>
+                    <p>Please take a few moments to complete this satisfaction survey.</p>
+                </div>
+            </header>
+            <ul>
+                <li id="age" class="focus">
+                   <label class="desc" for="field1"> What is your age range?</label>
+                   <div>
+                        <select name="age" class="field select medium" id="field1">
+                            <option value="18-24">18-24</option>
+                            <option value="25-34">25-34</option>
+                            <option value="30-50">30-50</option>
+                            <option value="50+">50+</option>
+                        </select>
+                   </div>
+                </li>
+
+                <li id="age" class="focus">
+                    <label class="desc" for="field2"> What is your yearly income range?</label>
+                    <div>
+                         <select name="age" class="field select medium" id="field2">
+                             <option value="$0-$25,000">$0-$25,000</option>
+                             <option value="$25,001-$50,000">$25,001-$50,000</option>
+                             <option value="$50,001-$100,000">$50,001-$100,000</option>
+                             <option value="$100,000+">$100,000+</option>
+                         </select>
+                    </div>
+                </li>
+
+                <li>
+                    <fieldset>
+                        <legend id="field3" class="desc">Gender Identity</legend>
+                    </fieldset>
+
+                    <div>
+                        <input type="hidden" name="field3" value>
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Male</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Female</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Nonbinary</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Other</span>
+                            </label>
+                            <input type="text" class="field text other" value>
+                        </span>
+                    </div>
+                </li>
+
+                <li>
+                    <fieldset>
+                        <legend id="field3" class="desc">Which of the following products have your purchased in the last 2 months. Please check all that apply.</legend>
+                    </fieldset>
+
+                    <div>
+                        <input type="hidden" name="field3" value>
+                        <span>
+                            <input type="checkbox" class="field checkbox" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Product 1</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="checkbox" class="field checkbox" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Product 2</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="checkbox" class="field checkbox" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Product 3</span>
+                            </label>
+                        </span>
+                    </div>
+                </li>
+
+                <li>
+                    <fieldset>
+                        <legend id="field3" class="desc">How often would you use our new product?</legend>
+                    </fieldset>
+
+                    <div>
+                        <input type="hidden" name="field3" value>
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Daily</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">Weekly</span>
+                            </label>
+                        </span>
+
+                        <span>
+                            <input type="radio" class="field radio" value="1">
+                            <label for="field3" class="choice">
+                                <span id="choice_text">MonthlyS</span>
+                            </label>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    
+</body>
+</html>
