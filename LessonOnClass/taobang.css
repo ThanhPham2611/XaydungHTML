@@ -1,0 +1,13 @@
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+table,td,tr {
+    border: 2px solid black;
+    border-spacing: 5px;
+}
+
+.head {
+    font-weight: bold;
+}
