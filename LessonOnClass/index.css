@@ -1,0 +1,31 @@
+header {
+    background-color: #ccc;
+    height: 100px;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(141, 28, 28);
+    height: 500px;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    background-color: blueviolet;
+    height: 500px;
+}
+
+article {
+    float: left;
+    width: 70%;
+    background-color: aqua;
+    height: 500px;
+}
+
+footer {
+    background-color: blanchedalmond;
+    height: 100px;
+    text-align: center;
+}

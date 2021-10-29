@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {
+            list-style: none;
+            position: relative;
+            display: inline-block;
+            background-color: black;
+        }
+        #menu li {
+            color: white;
+            text-decoration: none;
+        }
+        .ul1 {
+            position: absolute;
+            top: 0;
+            visibility: hidden;
+            left: 160px;
+        }
+        .sem1:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>Sem1
+                <ul class="ul1">
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>JS</li>
+                </ul>
+            </li>
+            <li>Sem2</li>
+            <li>Sem3</li>
+            <li>Sem4</li>
+        </ul>
+    </div>
+</body>
+</html>
