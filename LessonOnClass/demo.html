@@ -6,42 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #menu {
-            list-style: none;
-            position: relative;
-            display: inline-block;
-            background-color: black;
+        * {
+            box-sizing: border-box;
         }
-        #menu li {
-            color: white;
-            text-decoration: none;
-        }
-        .ul1 {
-            position: absolute;
-            top: 0;
-            visibility: hidden;
-            left: 160px;
-        }
-        .sem1:hover {
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* gap: 1px; */
             background-color: aqua;
+        }
+        .container div {
+            background-color: pink;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+        }
+        .item1,.item4 {
+            grid-column: 1/4;
+        }
+
+        .item3 {
+            grid-column: 2/4;
+        }
+
+        .item6 {
+            grid-area: 4/2/6/4;
         }
     </style>
 </head>
 <body>
-    <div id="menu">
-        <ul>
-            <li>Sem1
-                <ul class="ul1">
-                    <li>C++</li>
-                    <li>C#</li>
-                    <li>Java</li>
-                    <li>JS</li>
-                </ul>
-            </li>
-            <li>Sem2</li>
-            <li>Sem3</li>
-            <li>Sem4</li>
-        </ul>
+    <div class="container">
+        <div class="item1">Header</div>
+        <div class="item2">Sidebar</div>
+        <div class="item3">Content</div>
+        <div class="item4">Footer</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
     </div>
 </body>
 </html>
