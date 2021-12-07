@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Admin RestaurantTP</title>
+</head>
+<body>
+    <!-- Header html -->
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>AdminServer</a>
+    
+        <nav class="tabbar">
+            <a href="#home">Món ăn đặc biệt</a>
+            <a href="#dishes">Món ăn phổ biến</a>
+            
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a id="heart-icon" href="#" class="fas fa-heart"></a>
+            <a class="fas fa-shopping-cart" id="shopping" onclick="showCart()">
+                <div class="notify-cart" id="countsp">0</div>
+            </a>
+        </div>
+
+    </header>
+    <!-- header end -->
+
+    <!-- Món ăn phổ biến -->
+    <div class="container-fluid .col-12 .col-sm-10 .col-md-8 col-lg-8 text-center tableAdmin">
+        <div>
+            <table>
+                <tr>
+                    <th colspan="2">Quản lý món ăn</th>
+                </tr>
+
+                <tr>
+                    <td><label for="foodName">Tên món ăn</label></td>
+                    <td><input type="text" name="foodName" id="foodName" placeholder="Nhập tên món ăn"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="linkImg">Link hình ảnh</label></td>
+                    <td><input type="file" name="linkImg" id="linkImg" placeholder="Nhập link hình ảnh"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="price">Giá tiền</label></td>
+                    <td><input type="number" name="price" id="price" placeholder="Nhập giá tiền món ăn"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="button-admin">
+                            <button type="button" onclick="addFood()">Thêm đồ ăn</button>
+                            <button type="reset">Đặt lại</button>
+                        </div>
+                    </td>
+                </tr> 
+            </table>
+        </div>
+
+        <div class="container-fluid .col-12 .col-sm-10 .col-md-8 col-lg-8 text-center tableAdmin">
+            <div>
+                <table> 
+                    <tr>
+                        <th colspan="3">Danh sách món ăn trong cửa hàng</th>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Tên món ăn</label></td>
+                        <td><label for="">Hình ảnh</label></td>
+                        <td><label for="">Giá tiền</label></td>
+                    </tr>
+
+                    <tbody id="showFood">
+
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Món ăn phổ biến end -->
+
+
+
+
+    <!-- scripts -->
+    <script src="admin.js"></script>
+    <script>
+        showFood();
+    </script>
+</body>
+</html>

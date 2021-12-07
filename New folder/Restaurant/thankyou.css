@@ -1,0 +1,27 @@
+#main-thank h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#main-thank h1,h3 {
+    color: #27ae60;
+}
+
+#main-thank th {
+    background-color: #27ae60;
+    color: white;
+}
+
+#order,#infoCus tr {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+#order,#infoCus td {
+    font-size: 17px;
+}
+
+#myInfo td {
+    color: #27ae60;
+}

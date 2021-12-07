@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="thankyou.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header html -->
+    <header>
+        <a href="#" class="logo">ThanhPham's Restaurant</a>
+    
+        <nav class="tabbar">
+            <a class="active" href="#home">Trang chính</a>
+            <a href="./index.html">Thông tin nhà hàng</a>
+            <a href="#about">Đánh giá</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a id="heart-icon" href="#" class="fas fa-heart"></a>
+            <a class="fas fa-shopping-cart" id="shopping" onclick="showCart()">
+            </a>
+        </div>
+
+    </header>
+    <!-- header end -->
+
+    <main id="main-thank">
+        <div class="container-fluid .col-12 .col-sm-10 .col-md-8 text-center ">
+            <h1>Cảm ơn bạn đã đặt hàng và lựa chọn nhà hàng</h1>
+            <h3>Thông tin đặt hàng của bạn</h3>
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="3">Thông tin khách hàng</th>
+                    </tr>
+                    <tr>
+                        <th>Tên khách hàng</th>
+                        <th>Số điện thoại</th>
+                    </tr>
+                    <tbody id="infoCus">
+
+                    </tbody>
+                    <tr>
+                        <th colspan="2">Thông tin đặt hàng</th>
+                    </tr>
+                    <tr>
+                        <th>Giao hàng</th>
+                        <th>Thanh toán</th>
+                    </tr>
+                    <tbody id="order">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên món</th>
+                        <th>Số lượng</th>
+                        <th>
+                            Giá tiền
+                        </th>
+                    </tr>
+                    <tbody id="myInfo">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="shopping_cart.js"></script>
+    <script src="payment.js"></script>
+    <script>
+        show_Thankyou();
+        infoCustomer();
+    </script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Of ThanhPham</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- Header html -->
+    <header>
+        <a href="./index.html" class="logo"><i class="fas fa-utensils"></i>Tp</a>
+    
+        <nav class="tabbar">
+            <a class="active" href="#home">Trang chính</a>
+            <a href="#dishes">Đồ ăn đặc biệt</a>
+            <a href="#about">Cửa Hàng</a>
+            <a href="#menu">Thực đơn</a>
+            <a href="#review">Đánh giá</a>
+            <a href="#order">Đặt hàng</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a id="heart-icon" href="#" class="fas fa-heart"></a>
+            <a class="fas fa-shopping-cart" id="shopping" onclick="showCart()">
+                <div class="notify-cart" id="countsp">0</div>
+            </a>
+        </div>
+
+    </header>
+    <!-- header end -->
+
+    <!-- Cart Start -->
+    <div id="showCart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+            </tr>
+
+            <tbody id="mycart">
+
+            </tbody>
+        </table>
+        <a href="giohang.html">Thanh Toán</a>
+    </div>
+    <!-- Cart End -->
+
+    <!-- Cart Empty -->
+    <div id="cartEmpty">
+        <div class="img-empty">
+            <img src="../icon_payment/giohangtrong.png" alt="">
+        </div>
+       <div class="buy-icon">
+            <a href="#dishes" onclick="showCart()" class="btn">Mua hàng</a>
+       </div>
+    </div>
+    <!-- Cart Empty end -->
+
+    <!-- Search Form -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="search food" name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    <!-- endl -->
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="swiper home-slide">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Món ăn đặc biệt của nhà hàng</span>
+                        <h3>Mỳ Spagheti</h3>
+                        <p>Món mỳ nổi tiếng của nước Ý được đánh giá cao về chất lượng ẩm thực với hương vị nguyên bản</p>
+                        <a href="#" class="btn">Đặt hàng ngay bây giờ</a>
+                    </div>
+                    <div class="image">
+                        <img src="../FoodWeb/FoodWebSite/images/home-img-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Món ăn đặc biệt của nhà hàng</span>
+                        <h3>Vịt Quay Bắc Kinh</h3>
+                        <p>Vịt được tẩm ướp thêm những gia vị tuyệt vời, mang đúng màu sắc ẩm thực bắc kinh</p>
+                        <a href="#" class="btn">Đặt hàng ngay bây giờ</a>
+                    </div>
+                     <div class="image">
+                        <img src="../FoodWeb/FoodWebSite/images/home-img-2.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Món ăn đặc biệt của nhà hàng</span>
+                        <h3>Pizza đặc biệt</h3>
+                        <p>Được làm bởi các nguyên liệu hảo hạng, và được đánh giá cao về chất lượng tươi của phô mai và việt quất</p>
+                        <a href="#" class="btn">Đặt hàng ngay bây giờ</a>
+                    </div>
+                     <div class="image">
+                        <img src="../FoodWeb/FoodWebSite/images/home-img-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </section>
+    <!-- Endl home -->
+
+    <!-- dishes start -->
+    <section class="dishes" id="dishes">
+        <h3 class="sub-heading">Món ăn của nhà hàng</h3>
+        <h1 class="heading">Món ăn phổ biến</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="../FoodWeb/FoodWebSite/images/dish-1.png" alt="">
+                <h3>Hambergur Bò</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span>128.000 Đ</span>  
+                <button onclick="addItem(this),addItemDisplay()" class="btn">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="../FoodWeb/FoodWebSite/images/dish-2.png" alt="">
+                <h3>Phô mai rán</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>160.000 Đ</span> 
+                <button onclick="addItem(this),addItemDisplay()" class="btn">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="../FoodWeb/FoodWebSite/images/dish-3.png" alt="">
+                <h3>Gà Quay Ướp Tỏi</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>320.000 Đ</span> 
+                <button onclick="addItem(this),addItemDisplay()" class="btn">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="../FoodWeb/FoodWebSite/images/dish-4.png" alt="">
+                <h3>Pizza Đặc Biệt</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span>329.000 Đ</span> 
+                <button onclick="addItem(this),addItemDisplay()" class="btn">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="../FoodWeb/FoodWebSite/images/dish-5.png" alt="">
+                <h3>Bánh Chocolate</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span>89.000 Đ</span>
+                <button onclick="addItem(this),addItemDisplay()" class="btn">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="../FoodWeb/FoodWebSite/images/dish-6.png" alt="">
+                <h3>Đùi Gà Rán</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>68.000 Đ</span> 
+                <button onclick="addItem(this),addItemDisplay()" class="btn">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </section>
+    <!-- dishes end  -->
+
+
+    <!-- about start -->
+    <section class="about" id="about">
+        <h3 class="sub-heading">Thông tin về nhà hàng của chúng tôi</h3>
+        <h1 class="heading">Tại sao nên lựa chọn của hàng</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="../FoodWeb/FoodWebSite/images/about-img.png" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Đồ ăn được đánh giá 5 sao trong thành phố</h3>
+                <p>Vị trí của của hàng được lọt vào danh sách địa điểm vàng của thành phố</p>
+                <p>Dịch vụ và chất lượng đồ ăn được đánh giá đẳng cấp sang trọng và thượng lưu</p>
+                
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Giao Hàng Miễn Phí</span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Thanh Toán Dễ Dàng</span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-headset"></i>
+                        <span>Hỗ trợ khách hàng 24/7</span>
+                    </div>
+                </div>
+                <a href="#" class="btn">Thông tin thêm</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- about end -->
+
+    <!-- Menu start -->
+    <section class="menu" id="menu">
+        <h3 class="sub-heading">Thực đơn chính của nhà hàng</h3>
+        <h1 class="heading">Thực đơn</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-1.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Pizza Đặc Biệt</h3>
+                    <p>Đế pizza, Phô mai tươi, thịt nguội xông khói, việt quất, cà chua</p>
+                    <span class="price">329.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-2.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Hambergur Bò</h3>
+                    <p>Thịt bò, Phô mai, Cà chua, Hành, Rau, Sốt kem</p>
+                    <span class="price">128.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-3.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Fête de la Chandeleur</h3>
+                    <p>Bột mỳ, hương liệu đặc biệt, việt quất, sốt nho</p>
+                    <span class="price">156.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-4.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Crept kem</h3>
+                    <p>Bột mỳ, kem sữa, sốt socola, bột cacao, hạnh nhân</p>
+                    <span class="price">89.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-5.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Bánh ngũ cốc tươi</h3>
+                    <p>Các loại hoa quả, bơ đậu phộng, ngũ cốc tươi</p>
+                    <span class="price">158.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-6.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Bánh kem xứ lạnh</h3>
+                    <p>Bột mỳ, kem sữa, bột làm đông, hương liệu màu, chất làm đông</p>
+                    <span class="price">59.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-7.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>Nước hoa quả</h3>
+                    <p>Hoa quả tươi, mix vị, hương liệu đặc biệt</p>
+                    <span class="price">60.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-8.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Ngũ cốc hoa quả</h3>
+                    <p>Các loại hạt ngũ cốc, các loại quả tươi</p>
+                    <span class="price">156.000 Đ</span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../FoodWeb/FoodWebSite/images/menu-9.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                </div>
+
+                <div class="content contents">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Chanh tươi đặc biệt</h3>
+                    <p>Chanh nhập khẩu, hương liệu đặc biệt, muối</p>
+                    <span class="price">78.000 Đ<span>
+                    <button onclick="addItemMenu(this)" class="btn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Menu end -->
+
+    <!-- Review start -->
+    <section class="review" id="review">
+        <h3 class="sub-heading">Đánh giá của khách hàng</h3>
+        <h1 class="heading">Họ đã nói những gì ?</h1>
+
+        <div class="swiper review-slide">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="../FoodWeb/FoodWebSite/images/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>Thành phạm</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>                          
+                        </div>
+                    </div>
+                    <p>Đánh giá cao về chất lượng đồ ăn và dịch vụ ở đây</p>
+                </div>
+            </div>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="../FoodWeb/FoodWebSite/images/pic-2.png" alt="">
+                        <div class="user-info">
+                            <h3>Thu phạm</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>                          
+                        </div>
+                    </div>
+                    <p>Đúng là nhà hàng chất lượng 5 sao, nó khắc hẳn so với nhưng nhà hàng khác</p>
+                </div>
+            </div>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="../FoodWeb/FoodWebSite/images/pic-3.png" alt="">
+                        <div class="user-info">
+                            <h3>Hồng Nhung</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>                          
+                        </div>
+                    </div>
+                    <p>Có thể coi là một trải nghiệm mới là, đồ ăn rất ngon, mặc dù giá hơi đắt 1 chút nhưng vẫn ổn</p>
+                </div>
+            </div>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="../FoodWeb/FoodWebSite/images/pic-4.png" alt="">
+                        <div class="user-info">
+                            <h3>Diệu Thúy</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>                          
+                        </div>
+                    </div>
+                    <p>Vị trí đẹp, đồ ăn ngon, phục vụ tốt, xứng đáng nhà hàng 5 sao3</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Review end -->
+
+    <!-- Order start -->
+    <section class="order" id="order">
+        <h3 class="sub-heading">Đánh giá của khách hàng</h3>
+        <h1 class="heading">Họ đã nói những gì ?</h1>
+
+        <form action="#">
+            <div class="inputBox">
+                <div class="input">
+                    <span>Tên của bạn*</span>
+                    <input id="name" oninput="checkErrorName()" onchange="checkErrorName()" type="text" placeholder="Nhập tên của bạn">
+                    <div id="error">
+                    </div>
+                </div>
+            </div> 
+            <div class="inputBox">
+                <div class="input">
+                    <span>Số điện thoại *</span>
+                    <input id="phone" type="tel" oninput="checkErrorPhone()" onchange="checkErrorPhone()" placeholder="Nhập số điện thoại">
+                    <div id="error-p"></div>
+                    <div id="error-phone"></div>
+                </div>
+                <div class="input">
+                    <span>Thêm đồ</span>
+                    <input type="" placeholder="Thêm tương ớt,.....">
+                </div>
+            </div>   
+            <div class="inputBox">
+                <div class="input">
+                    <span>Số lượng</span>
+                    <input id="quantity" type="number" placeholder="Nhập số lượng" value="1">
+                </div>
+                <div class="input">
+                    <span>Ngày giờ</span>
+                    <input id="time" onclick="checkError()" type="datetime-local">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Địa chỉ</span>
+                    <textarea id="address" onclick="checkError()" name="" id="" placeholder="Nhập địa chỉ" 
+                    cols="30" rows="10"></textarea>
+                    <div id="error-ad">
+
+                    </div>
+                </div>
+                <div class="input">
+                    <span>Ghi chú</span>
+                    <textarea name="" id="" placeholder="Nhập ghi chú" 
+                    cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <button type="button" onclick="checkError()" class="btn">Đặt hàng ngay</button>
+        </form>
+        
+    </section>
+    <!-- Order end -->
+
+    <!-- Footer start -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Ví trí</h3>
+                <a href="#">Việt Nam</a>
+                <a href="#">Hàn Quốc</a>
+                <a href="#">Pháp</a>
+                <a href="#">Singapo</a>
+                <a href="#">ThaiLand</a>
+            </div>
+
+            <div class="box">
+                <h3>Check Web</h3>
+                <a href="#home">Trang chính</a>
+                <a href="#dishes">Đồ ăn phổ biến</a>
+                <a href="#about">Cửa Hàng</a>
+                <a href="#menu">Thực đơn</a>
+                <a href="#review">Đánh giá</a>
+                <a href="#order">Đặt hàng</a>
+            </div>
+
+            <div class="box">
+                <h3>Thông tin liên hệ</h3>
+                <a href="tel:0968686868">+84(968686868)</a>
+                <a href="tel:0923456789">+84(923456789)</a>
+                <a href="#">ThanhRestau@gmail.com</a>
+                <a href="#"></a>
+                <a href="#">Số 1, Tòa nhà to nhất thành phố HN</a>
+            </div>
+
+            <div class="box">
+                <h3>Theo dõi tại</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Youtube</a>
+            </div>
+        </div>
+        <div class="credit">copyright @ 2021 by <span>ThanhPham</span></div>
+    </section>
+
+
+    
+    <!-- JS link -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="manager.js"></script>
+    <script src="shopping_cart.js"></script>
+    <script>
+        // showCartPay();
+        countItem();
+    </script>
+</body>
+
+
+</html>
